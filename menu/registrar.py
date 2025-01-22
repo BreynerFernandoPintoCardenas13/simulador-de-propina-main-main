@@ -11,10 +11,11 @@ def option1():
             =============================================
             Ingrese la información del gasto:
 """)
-        Nombre=str(input(f" \t   Nombre del usuario: "))
+        NombreKey=str(input(f" \t   Nombre del usuario: "))
+        Nombre=NombreKey
         Correo=str(input(" \t   Correo Elcetronico: "))
         Rol=input(" \t   Selecciona rol(Administrador/Usuario):")
-        formato=addRegistrar(Nombre, Correo, Rol, formato)
+        formato=addRegistrar(NombreKey, Nombre, Correo, Rol, formato)
         
         decision=input("""Ingrese 'S' para guardar o 'N' para cancelar: 
                             =============================================        

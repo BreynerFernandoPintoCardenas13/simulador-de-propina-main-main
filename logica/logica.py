@@ -13,10 +13,10 @@ def read_file(path):
 def write_file(data, path):
     with open(f"databases/{path}", "w", encoding="utf-8") as file:
         json.dump(data, file, indent=4)
-def addRegistrar(Nombre, Correo, Rol, formato):
+def addRegistrar(Nombre, Correo, Rol, formato, NombreKey):
     data = read_file("base.json")
-    formato= {
-        'Nobre del usuario:':Nombre,
+    formato[NombreKey]= {
+        'Nombre del usuario:':Nombre,
         'Correo electronico':Correo,
         'Rol':Rol
     }
@@ -39,23 +39,18 @@ def mostrarTodos(formato):
     write_file(formato, "base.json")
 
 
-def mostrarCategoria(formato, categoria):
-    filtrarCategoria= {date: client for date, client in formato.items() if client['categoria']==categoria}
+def mostrarCategoria(formato, Nombre):
+    filtrarCategoria= {NombreKey: client for Nombre, client in formato.items() if client['nombre']==nombre}
 
     if filtrarCategoria:
-        for date, client in filtrarCategoria.items():
-            print(f"\ndate: {date}")
-            print(f"Monto: {client['monto']}")
-            print(f"categoria: {client['categoria']}")
-            print(f"Descripcion: {client['descripcion']}")
+        for NombreKey, client in filtrarCategoria.items():
+            print(f"Nombre de usuario: {client['Nombre']}")
+            print(f"Correo: {client['Correo']}")
+            print(f"Rol: {client['Rol']}")
     else:
         print("NO REGISTRADA")
     tablaBonita=[]
-    headers=["FECHA", "MONTO", "CATEGORIA", "TELEFONO"]
-
-    for date, client in filtrarCategoria.items():
-        todo=[date, client['monto'], client['categoria'], client['descripcion']]
-        tablaBonita.append(todo)
+    headers=["Nombre", "Correo", "Rol"]
     print(tabulate(tablaBonita, headers=headers, tablefmt="grid" ))
 
     write_file(formato, "base.json")

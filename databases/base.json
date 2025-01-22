@@ -1,5 +1,10 @@
 {
     "Nobre del usuario:": "Breyner",
     "Correo electronico": "Pinto",
-    "Rol": "admin"
+    "Rol": "admin",
+    "Breyner": {
+        "Nombre del usuario:": "Breyner",
+        "Correo electronico": "Pinto",
+        "Rol": "Admin"
+    }
 }
