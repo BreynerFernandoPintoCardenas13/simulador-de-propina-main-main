@@ -11,14 +11,17 @@ def option1():
             =============================================
             Ingrese la información del gasto:
 """)
-        monto=float(input(f" \t   -Monto del gasto: "))
-        categoria=str(input(" \t   -Categoría (ej. comida, transporte, entretenimiento, otros: )"))
-        descripcion=input(" \t   -Descripción (opcional): ")
-        date = input(" \t   -cual es la fecha? (05/05/2000)")
-        formato=addRegistrar(monto, categoria, descripcion, date, formato)
-        write_file(formato, "base.json")
-        decision=int(input("""Ingrese 'S' para guardar o 'N' para cancelar: 
+        monto=str(input(f" \t   Nombre del usuario: "))
+        categoria=str(input(" \t   Correo Elcetronico: "))
+        descripcion=input(" \t   Selecciona rol(Administrador/Usuario):")
+        #formato=addRegistrar(monto, categoria, descripcion, formato)
+        
+        decision=input("""Ingrese 'S' para guardar o 'N' para cancelar: 
                             =============================================        
-                               """))
-            
+                               """)
+        decision.lower()
+        if decision=="s":
+            write_file(formato, "base.json")
+        elif decision=="n":
+            print("se ha cancelado todo")    
         

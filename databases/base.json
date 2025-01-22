@@ -13,5 +13,10 @@
         "monto": 2000.0,
         "categoria": "comida",
         "descripcion": ""
+    },
+    "& C:/Users/ACER/AppData/Local/Microsoft/WindowsApps/python3.11.exe c:/Users/ACER/OneDrive/Documentos/CAMPUSLANDS/propina/simulador-de-propina-main-main/main.py": {
+        "monto": "Breyner",
+        "categoria": "Pinto",
+        "descripcion": "Admin"
     }
 }
