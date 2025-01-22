@@ -1,5 +1,5 @@
 import json
-from tabulate import tabulate
+import tabulate
 # Función para leer el archivo JSON
 def read_file(path):
     try:
@@ -13,12 +13,12 @@ def read_file(path):
 def write_file(data, path):
     with open(f"databases/{path}", "w", encoding="utf-8") as file:
         json.dump(data, file, indent=4)
-def addRegistrar(monto, categoria, descripcion, date, formato):
+def addRegistrar(Nombre, Correo, Rol, formato):
     data = read_file("base.json")
-    formato[date]= {
-        'Nobre del usuario:':monto,
-        'Correo electronico':categoria,
-        'Rol':descripcion,
+    formato= {
+        'Nobre del usuario:':Nombre,
+        'Correo electronico':Correo,
+        'Rol':Rol
     }
     write_file(data, "base.json")
     return formato

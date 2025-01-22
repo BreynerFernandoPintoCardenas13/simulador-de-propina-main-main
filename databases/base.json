@@ -1,22 +1,5 @@
 {
-    "06/06/2018": {
-        "monto": 1.0,
-        "categoria": "a",
-        "descripcion": "a"
-    },
-    "07/09/2023": {
-        "monto": 5000.0,
-        "categoria": "comida",
-        "descripcion": "libra de carne"
-    },
-    "07/09/2024": {
-        "monto": 2000.0,
-        "categoria": "comida",
-        "descripcion": ""
-    },
-    "& C:/Users/ACER/AppData/Local/Microsoft/WindowsApps/python3.11.exe c:/Users/ACER/OneDrive/Documentos/CAMPUSLANDS/propina/simulador-de-propina-main-main/main.py": {
-        "monto": "Breyner",
-        "categoria": "Pinto",
-        "descripcion": "Admin"
-    }
+    "Nobre del usuario:": "Breyner",
+    "Correo electronico": "Pinto",
+    "Rol": "admin"
 }

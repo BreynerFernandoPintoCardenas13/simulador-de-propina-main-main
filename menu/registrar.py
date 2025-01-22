@@ -7,14 +7,14 @@ def option1():
     while True:
         print(f"""
             =============================================
-            Registrar Nuevo Gasto
+            Registrar Nuevo Usuario
             =============================================
             Ingrese la información del gasto:
 """)
-        monto=str(input(f" \t   Nombre del usuario: "))
-        categoria=str(input(" \t   Correo Elcetronico: "))
-        descripcion=input(" \t   Selecciona rol(Administrador/Usuario):")
-        #formato=addRegistrar(monto, categoria, descripcion, formato)
+        Nombre=str(input(f" \t   Nombre del usuario: "))
+        Correo=str(input(" \t   Correo Elcetronico: "))
+        Rol=input(" \t   Selecciona rol(Administrador/Usuario):")
+        formato=addRegistrar(Nombre, Correo, Rol, formato)
         
         decision=input("""Ingrese 'S' para guardar o 'N' para cancelar: 
                             =============================================        
@@ -24,4 +24,4 @@ def option1():
             write_file(formato, "base.json")
         elif decision=="n":
             print("se ha cancelado todo")    
-        
+            break
